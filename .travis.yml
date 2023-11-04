@@ -15,7 +15,7 @@ after_success:
   - docker build -t swissgato/multi-nginx ./nginx
   - docker build -t swissgato/multi-server ./server
   - docker build -t swissgato/multi-worker ./worker
-  # Log in to the docker CLI Problems
+  # Log in to the docker CLI PWD Problems
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push swissgato/multi-client
